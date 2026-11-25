@@ -1,0 +1,5 @@
+# Add with: sudo crontab -u www-data -e
+# Runs every scheduled job (class reminders, recorded lectures, daily automation, task reminders, weekly report).
+* * * * * cd /var/www/lwe-portal && php artisan schedule:run >> /dev/null 2>&1
+# Nightly backup at 2:30 AM server time
+30 2 * * * /var/www/lwe-portal/deploy/backup.sh >> /var/www/lwe-portal/storage/logs/backup.log 2>&1

@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .card { @apply rounded-2xl border border-lwe-line bg-white p-5 sm:p-6; }
+    .label { @apply mb-1 block text-xs font-semibold text-slate-700; }
+    .input { @apply block h-11 w-full rounded-lg border-slate-300 text-sm focus:border-lwe-navy2 focus:ring-lwe-navy2; }
+    .textarea { @apply block w-full rounded-lg border-slate-300 text-sm focus:border-lwe-navy2 focus:ring-lwe-navy2; }
+    .btn { @apply inline-flex h-11 items-center justify-center gap-2 rounded-lg px-5 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50; }
+    .btn-primary { @apply btn bg-lwe-orange text-lwe-navy hover:brightness-95; }
+    .btn-dark { @apply btn bg-lwe-navy text-white hover:bg-lwe-navy2; }
+    .btn-outline { @apply btn border border-lwe-navy bg-white text-lwe-navy hover:bg-slate-50; }
+    .btn-danger { @apply btn bg-red-700 text-white hover:bg-red-800; }
+    .btn-sm { @apply h-9 px-3 text-xs; }
+    .page-title { @apply text-2xl font-semibold text-lwe-navy; }
+    .muted { @apply text-sm text-lwe-muted; }
+    .table-wrap { @apply overflow-x-auto rounded-2xl border border-lwe-line bg-white; }
+    .table { @apply min-w-full divide-y divide-lwe-line text-sm; }
+    .table th { @apply whitespace-nowrap bg-slate-50 px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-600; }
+    .table td { @apply whitespace-nowrap px-4 py-3 align-middle; }
+}
